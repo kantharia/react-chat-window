@@ -32,11 +32,6 @@
         ],
         "no-console": ["error", { "allow": ["error"] }],
         "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-        "quotes": [
-            "error",
-            "single",
-            { "avoidEscape": true, "allowTemplateLiterals": true }
-        ],
         "react/prop-types": "off",
         "semi": [
             "error",

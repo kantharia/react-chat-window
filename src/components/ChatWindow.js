@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import MessageList from './MessageList';
-import UserInput from './UserInput';
-import Header from './Header';
-
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import MessageList from "./MessageList";
+import UserInput from "./UserInput";
+import Header from "./Header";
 
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   onUserInputSubmit(message) {
@@ -20,12 +20,9 @@ class ChatWindow extends Component {
 
   render() {
     let messageList = this.props.messageList || [];
-    let classList = [
-      'sc-chat-window',
-      (this.props.isOpen ? 'opened' : 'closed')
-    ];
+    let classList = ["sc-chat-window", this.props.isOpen ? "opened" : "closed"];
     return (
-      <div className={classList.join(' ')}>
+      <div className={classList.join(" ")}>
         <Header
           teamName={this.props.agentProfile.teamName}
           imageUrl={this.props.agentProfile.imageUrl}
@@ -39,6 +36,7 @@ class ChatWindow extends Component {
           onSubmit={this.onUserInputSubmit.bind(this)}
           onFilesSelected={this.onFilesSelected.bind(this)}
           showEmoji={this.props.showEmoji}
+          showFilePicker={this.props.showFilePicker}
         />
       </div>
     );
@@ -51,7 +49,8 @@ ChatWindow.propTypes = {
   onClose: PropTypes.func.isRequired,
   onFilesSelected: PropTypes.func,
   onUserInputSubmit: PropTypes.func.isRequired,
-  showEmoji: PropTypes.bool
+  showEmoji: PropTypes.bool,
+  showFilePicker: PropTypes.bool,
 };
 
 export default ChatWindow;
