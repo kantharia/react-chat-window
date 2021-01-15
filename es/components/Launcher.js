@@ -10,6 +10,7 @@ import ChatWindow from "./ChatWindow";
 import launcherIcon from "./../assets/logo-no-bg.svg";
 import incomingMessageSound from "./../assets/sounds/notification.mp3";
 import launcherIconActive from "./../assets/close-icon.png";
+import "../../public/asssets/css/intro-social-icons.css";
 
 var Launcher = function (_Component) {
   _inherits(Launcher, _Component);
@@ -66,8 +67,8 @@ var Launcher = function (_Component) {
           onClick: this.handleClick.bind(this)
         },
         React.createElement(MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
-        React.createElement("img", { alt: "", className: "sc-open-icon", src: launcherIconActive }),
-        React.createElement("img", { alt: "", className: "sc-closed-icon", src: launcherIcon })
+        React.createElement("i", { className: "icon-close-button sc-open-icon" }),
+        React.createElement("i", { className: "icon-chat-widget-cloud sc-closed-icon" })
       ),
       React.createElement(ChatWindow, {
         messageList: this.props.messageList,
