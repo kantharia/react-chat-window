@@ -4,6 +4,7 @@ import ChatWindow from "./ChatWindow";
 import launcherIcon from "./../assets/logo-no-bg.svg";
 import incomingMessageSound from "./../assets/sounds/notification.mp3";
 import launcherIconActive from "./../assets/close-icon.png";
+import "../../public/asssets/css/intro-social-icons.css";
 
 class Launcher extends Component {
   constructor() {
@@ -50,8 +51,8 @@ class Launcher extends Component {
           onClick={this.handleClick.bind(this)}
         >
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
-          <img alt="" className={"sc-open-icon"} src={launcherIconActive} />
-          <img alt="" className={"sc-closed-icon"} src={launcherIcon} />
+          <i className="icon-close-button sc-open-icon"></i>
+          <i className="icon-chat-widget-cloud sc-closed-icon"></i>
         </div>
         <ChatWindow
           messageList={this.props.messageList}
