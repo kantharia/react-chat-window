@@ -4,7 +4,7 @@ import ChatWindow from "./ChatWindow";
 import launcherIcon from "./../assets/logo-no-bg.svg";
 import incomingMessageSound from "./../assets/sounds/notification.mp3";
 import launcherIconActive from "./../assets/close-icon.png";
-import "../../public/asssets/css/intro-social-icons.css";
+import "./../assets/css/intro-social-icons.css";
 
 class Launcher extends Component {
   constructor() {

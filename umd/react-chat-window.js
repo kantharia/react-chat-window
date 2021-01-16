@@ -4709,7 +4709,7 @@ var logo_no_bg_default = /*#__PURE__*/__webpack_require__.n(logo_no_bg);
 var notification = __webpack_require__(8);
 var notification_default = /*#__PURE__*/__webpack_require__.n(notification);
 
-// EXTERNAL MODULE: ./public/asssets/css/intro-social-icons.css
+// EXTERNAL MODULE: ./src/assets/css/intro-social-icons.css
 var intro_social_icons = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/components/Launcher.js
