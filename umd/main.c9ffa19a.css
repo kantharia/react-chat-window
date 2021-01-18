@@ -236,15 +236,22 @@
 }
 
 .sc-launcher .sc-closed-icon {
-  right: 5px;
-  bottom: 7px;
-  font-size: 20px;
+  font-size: 30px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
 }
 
 .sc-launcher .sc-open-icon {
-  right: 27px;
-  bottom: 25px;
-  font-size: 20px;
+  font-size: 30px;
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 .sc-header {
