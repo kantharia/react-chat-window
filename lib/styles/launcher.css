@@ -99,3 +99,9 @@
   right: 0px;
   bottom: 0px;
 }
+
+.sc-header-close-button {
+  position: relative;
+  top: 18px;
+  font-size: 16px;
+}

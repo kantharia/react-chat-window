@@ -4585,7 +4585,6 @@ UserInput_UserInput.propTypes = {
 /* harmony default export */ var components_UserInput = (UserInput_UserInput);
 // EXTERNAL MODULE: ./src/assets/close-icon.png
 var close_icon = __webpack_require__(2);
-var close_icon_default = /*#__PURE__*/__webpack_require__.n(close_icon);
 
 // CONCATENATED MODULE: ./src/components/Header.js
 function Header_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4608,20 +4607,20 @@ var Header_Header = function (_Component) {
 
   Header.prototype.render = function render() {
     return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-      'div',
-      { className: 'sc-header' },
-      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('img', { className: 'sc-header--img', src: this.props.imageUrl, alt: '' }),
+      "div",
+      { className: "sc-header" },
+      external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("img", { className: "sc-header--img", src: this.props.imageUrl, alt: "" }),
       external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        { className: 'sc-header--team-name' },
-        ' ',
+        "div",
+        { className: "sc-header--team-name" },
+        " ",
         this.props.teamName,
-        ' '
+        " "
       ),
       external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-        'div',
-        { className: 'sc-header--close-button', onClick: this.props.onClose },
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('img', { src: close_icon_default.a, alt: '' })
+        "div",
+        { className: "", onClick: this.props.onClose },
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", { className: "icon-close-button sc-header-close-button" })
       )
     );
   };

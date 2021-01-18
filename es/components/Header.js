@@ -4,8 +4,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import React, { Component } from 'react';
-import closeIcon from './../assets/close-icon.png';
+import React, { Component } from "react";
+import closeIcon from "./../assets/close-icon.png";
 
 var Header = function (_Component) {
   _inherits(Header, _Component);
@@ -18,20 +18,20 @@ var Header = function (_Component) {
 
   Header.prototype.render = function render() {
     return React.createElement(
-      'div',
-      { className: 'sc-header' },
-      React.createElement('img', { className: 'sc-header--img', src: this.props.imageUrl, alt: '' }),
+      "div",
+      { className: "sc-header" },
+      React.createElement("img", { className: "sc-header--img", src: this.props.imageUrl, alt: "" }),
       React.createElement(
-        'div',
-        { className: 'sc-header--team-name' },
-        ' ',
+        "div",
+        { className: "sc-header--team-name" },
+        " ",
         this.props.teamName,
-        ' '
+        " "
       ),
       React.createElement(
-        'div',
-        { className: 'sc-header--close-button', onClick: this.props.onClose },
-        React.createElement('img', { src: closeIcon, alt: '' })
+        "div",
+        { className: "", onClick: this.props.onClose },
+        React.createElement("i", { className: "icon-close-button sc-header-close-button" })
       )
     );
   };

@@ -254,6 +254,12 @@
   bottom: 0px;
 }
 
+.sc-header-close-button {
+  position: relative;
+  top: 18px;
+  font-size: 16px;
+}
+
 .sc-header {
   background: #4e8cff;
   min-height: 75px;
