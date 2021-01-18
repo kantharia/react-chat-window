@@ -93,7 +93,7 @@ var MessageCount = function MessageCount(props) {
   return React.createElement(
     "div",
     { className: "sc-new-messages-count" },
-    props.count
+    props.count || 1
   );
 };
 

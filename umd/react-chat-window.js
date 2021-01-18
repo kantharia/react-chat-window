@@ -4808,7 +4808,7 @@ var Launcher_MessageCount = function MessageCount(props) {
   return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     "div",
     { className: "sc-new-messages-count" },
-    props.count
+    props.count || 1
   );
 };
 
