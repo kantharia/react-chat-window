@@ -238,7 +238,7 @@
 .sc-launcher .sc-closed-icon {
   font-size: 30px;
   position: absolute;
-  top: 14px;
+  top: 10px;
   left: 15px;
 }
 
@@ -246,7 +246,7 @@
   font-size: 30px;
   position: absolute;
   top: 45px;
-  left: 15px;
+  left: 10px;
   padding: 0px;
   width: 0px;
   height: 0px;
@@ -787,5 +787,3 @@
   content: "b";
 }
 
-
-/*# sourceMappingURL=main.a42b8bed.css.map*/
