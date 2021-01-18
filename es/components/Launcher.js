@@ -67,8 +67,8 @@ var Launcher = function (_Component) {
           onClick: this.handleClick.bind(this)
         },
         React.createElement(MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
-        React.createElement("i", { className: "icon-close-button sc-open-icon" }),
-        React.createElement("i", { className: "icon-chat-widget-cloud sc-closed-icon" })
+        React.createElement("i", { className: "icon-close-button sc-open-icon sc-cloud-icon" }),
+        React.createElement("i", { className: "icon-chat-widget-cloud sc-closed-icon sc-close-icon" })
       ),
       React.createElement(ChatWindow, {
         messageList: this.props.messageList,
@@ -93,7 +93,7 @@ var MessageCount = function MessageCount(props) {
   return React.createElement(
     "div",
     { className: "sc-new-messages-count" },
-    props.count || 1
+    props.count
   );
 };
 

@@ -140,11 +140,11 @@
 }
 
 .sc-launcher:before {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   width: 60px;
-  height: 60px;  
+  height: 60px;
   border-radius: 50%;
   -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: -webkit-box-shadow 0.2s ease-in-out;
@@ -204,8 +204,8 @@
 }
 
 .sc-launcher:hover {
-  -webkit-box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
-          box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0px 27px 1.5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 27px 1.5px rgba(0, 0, 0, 0.2);
 }
 
 .sc-new-messages-count {
@@ -223,7 +223,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 50%;
-	width: 22px;
+  width: 22px;
   height: 22px;
   background: #ff4646;
   color: white;
@@ -234,6 +234,19 @@
   -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
           box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+.sc-launcher .sc-closed-icon {
+  right: 5px;
+  bottom: 7px;
+  font-size: 20px;
+}
+
+.sc-launcher .sc-open-icon {
+  right: 25px;
+  bottom: 25px;
+  font-size: 20px;
+}
+
 .sc-header {
   background: #4e8cff;
   min-height: 75px;
@@ -761,5 +774,3 @@
   content: "b";
 }
 
-
-/*# sourceMappingURL=main.7d6fb298.css.map*/

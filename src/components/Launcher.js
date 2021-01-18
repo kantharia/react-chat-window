@@ -51,8 +51,8 @@ class Launcher extends Component {
           onClick={this.handleClick.bind(this)}
         >
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
-          <i className="icon-close-button sc-open-icon"></i>
-          <i className="icon-chat-widget-cloud sc-closed-icon"></i>
+          <i className="icon-close-button sc-open-icon sc-cloud-icon"></i>
+          <i className="icon-chat-widget-cloud sc-closed-icon sc-close-icon"></i>
         </div>
         <ChatWindow
           messageList={this.props.messageList}
@@ -73,7 +73,7 @@ const MessageCount = (props) => {
   if (props.count === 0 || props.isOpen === true) {
     return null;
   }
-  return <div className={"sc-new-messages-count"}>{props.count || 1}</div>;
+  return <div className={"sc-new-messages-count"}>{props.count}</div>;
 };
 
 Launcher.propTypes = {

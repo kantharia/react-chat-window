@@ -4782,8 +4782,8 @@ var Launcher_Launcher = function (_Component) {
           onClick: this.handleClick.bind(this)
         },
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Launcher_MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", { className: "icon-close-button sc-open-icon" }),
-        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", { className: "icon-chat-widget-cloud sc-closed-icon" })
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", { className: "icon-close-button sc-open-icon sc-cloud-icon" }),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", { className: "icon-chat-widget-cloud sc-closed-icon sc-close-icon" })
       ),
       external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(components_ChatWindow, {
         messageList: this.props.messageList,
@@ -4808,7 +4808,7 @@ var Launcher_MessageCount = function MessageCount(props) {
   return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
     "div",
     { className: "sc-new-messages-count" },
-    props.count || 1
+    props.count
   );
 };
 
