@@ -133,6 +133,7 @@
   -o-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .sc-launcher:before {
@@ -980,4 +981,4 @@ body {
   font-size: 14px;
 }
 
-/*# sourceMappingURL=demo.1140539a.css.map*/
+/*# sourceMappingURL=demo.58554ac7.css.map*/

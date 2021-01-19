@@ -137,6 +137,7 @@
   -o-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .sc-launcher:before {
@@ -787,5 +788,3 @@
   content: "b";
 }
 
-
-/*# sourceMappingURL=main.19cc0ee4.css.map*/
