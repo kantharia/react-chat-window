@@ -7,11 +7,12 @@ import launcherIconActive from "./../assets/close-icon.png";
 import "./../assets/css/intro-social-icons.css";
 
 class Launcher extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       launcherIcon,
       isOpen: false,
+      colors: props.colors || {},
     };
   }
 
@@ -41,18 +42,53 @@ class Launcher extends Component {
       });
     }
   }
+
   render() {
+    let { colors } = this.state;
+    let { primary, secondary } = colors;
+
     const isOpen = this.props["isOpen"] ? this.props.isOpen : this.state.isOpen;
-    const classList = ["sc-launcher", isOpen ? "opened" : ""];
+    // const classList = ["sc-launcher", isOpen ? "opened" : ""];
     return (
       <div id="sc-launcher">
         <div
-          className={classList.join(" ")}
+          // className={classList.join(" ")}
           onClick={this.handleClick.bind(this)}
+          style={{
+            height: "60px",
+            width: "60px",
+            borderRadius: "50%",
+            backgroundColor: primary || "#888888",
+            position: "fixed",
+            bottom: "25px",
+            right: "25px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            boxShadow: isOpen ? "1px 1px 15px #888888" : "none",
+          }}
         >
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
-          <i className="icon-close-button sc-open-icon sc-cloud-icon"></i>
-          <i className="icon-chat-widget-cloud sc-closed-icon sc-close-icon"></i>
+          <div style={{ marginTop: "10px" }}>
+            {isOpen ? (
+              <i
+                className="icon-close-button sc-cloud-icon"
+                style={{ fontSize: "24pt", color: secondary }}
+              ></i>
+            ) : (
+              <i
+                className="icon-chat-widget-cloud sc-close-icon"
+                style={{
+                  fontSize: "24pt",
+                  color: secondary,
+                }}
+              ></i>
+            )}
+          </div>
+          {/* <div style={{backgroundColor:"red"}}>
+            <i className="icon-close-button sc-open-icon sc-cloud-icon"></i>
+            <i className="icon-chat-widget-cloud sc-closed-icon sc-close-icon"></i>
+          </div> */}
         </div>
         <ChatWindow
           messageList={this.props.messageList}
@@ -63,6 +99,7 @@ class Launcher extends Component {
           onClose={this.handleClick.bind(this)}
           showEmoji={this.props.showEmoji}
           showFilePicker={this.props.showFilePicker}
+          colors={colors || {}}
         />
       </div>
     );

@@ -84,7 +84,23 @@ class Demo extends Component {
           newMessagesCount={this.state.newMessagesCount}
           handleClick={this._handleClick.bind(this)}
           isOpen={this.state.isOpen}
-          showEmoji
+          showEmoji={false}
+          colors={{
+            primary: "#2c2c54",
+            secondary: "#706fd3",
+            headerBg: "#2c2c54",
+            headerText: "#ecf0f1",
+            headerFontSize: "32px",
+            chatListBg: "#474787",
+            chatMeBg: "#706fd3",
+            chatMeText: "#ecf0f1",
+            chatThemBg: "#706fd3",
+            chatThemText: "#bdc3c7",
+            inputBg: "#2c2c54",
+            inputPlaceholder: "#aaa69d",
+            inputText: "#ffda79",
+            inputIconColor: "#ffda79",
+          }}
         />
         <img className="demo-monster-img" src={monsterImgUrl} />
         <Footer />

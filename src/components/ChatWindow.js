@@ -7,7 +7,9 @@ import Header from "./Header";
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      colors: props.colors,
+    };
   }
 
   onUserInputSubmit(message) {
@@ -24,15 +26,18 @@ class ChatWindow extends Component {
     return (
       <div className={classList.join(" ")}>
         <Header
+          colors={this.state.colors || {}}
           teamName={this.props.agentProfile.teamName}
           imageUrl={this.props.agentProfile.imageUrl}
           onClose={this.props.onClose}
         />
         <MessageList
+          colors={this.state.colors || {}}
           messages={messageList}
           imageUrl={this.props.agentProfile.imageUrl}
         />
         <UserInput
+          colors={this.state.colors || {}}
           onSubmit={this.onUserInputSubmit.bind(this)}
           onFilesSelected={this.onFilesSelected.bind(this)}
           showEmoji={this.props.showEmoji}

@@ -7,13 +7,14 @@ import PopupWindow from "./popups/PopupWindow";
 import EmojiPicker from "./emoji-picker/EmojiPicker";
 
 class UserInput extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       inputActive: false,
       inputHasText: false,
       emojiPickerIsOpen: false,
       emojiFilter: "",
+      colors: props.colors || {},
     };
   }
 
@@ -106,7 +107,10 @@ class UserInput extends Component {
     if (this.state.inputHasText) {
       return (
         <div className="sc-user-input--button">
-          <SendIcon onClick={this._submitText.bind(this)} />
+          <SendIcon
+            colors={this.state.colors}
+            onClick={this._submitText.bind(this)}
+          />
         </div>
       );
     }
@@ -130,9 +134,15 @@ class UserInput extends Component {
   }
 
   render() {
-    const { emojiPickerIsOpen, inputActive } = this.state;
+    const { emojiPickerIsOpen, inputActive, colors } = this.state;
+    let { inputBg, inputText, inputPlaceholder } = colors;
+    console.log("User Input : ", colors);
     return (
-      <form className={`sc-user-input ${inputActive ? "active" : ""}`}>
+      <form
+        className={`sc-user-input ${inputActive ? "active" : ""}`}
+        style={{ backgroundColor: inputBg, color: inputText }}
+      >
+        <style>{`.sc-user-input--text:empty:before { color:${inputPlaceholder} }`}</style>
         <div
           role="button"
           tabIndex="0"
@@ -150,6 +160,7 @@ class UserInput extends Component {
           contentEditable="true"
           placeholder="Write a reply..."
           className="sc-user-input--text"
+          style={{ color: inputText }}
         ></div>
         <div className="sc-user-input--buttons">
           <div className="sc-user-input--button"></div>
