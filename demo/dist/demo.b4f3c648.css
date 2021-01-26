@@ -255,6 +255,13 @@
   position: relative;
   top: 18px;
   font-size: 16px;
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .sc-header-close-button {
+    display: block;
+  }
 }
 
 .sc-header {
@@ -981,4 +988,4 @@ body {
   font-size: 14px;
 }
 
-/*# sourceMappingURL=demo.58554ac7.css.map*/
+/*# sourceMappingURL=demo.b4f3c648.css.map*/

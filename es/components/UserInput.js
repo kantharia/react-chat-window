@@ -15,10 +15,10 @@ import EmojiPicker from "./emoji-picker/EmojiPicker";
 var UserInput = function (_Component) {
   _inherits(UserInput, _Component);
 
-  function UserInput() {
+  function UserInput(props) {
     _classCallCheck(this, UserInput);
 
-    var _this = _possibleConstructorReturn(this, _Component.call(this));
+    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 
     _this.toggleEmojiPicker = function (e) {
       e.preventDefault();
@@ -72,7 +72,8 @@ var UserInput = function (_Component) {
       inputActive: false,
       inputHasText: false,
       emojiPickerIsOpen: false,
-      emojiFilter: ""
+      emojiFilter: "",
+      colors: props.colors || {}
     };
     return _this;
   }
@@ -122,7 +123,10 @@ var UserInput = function (_Component) {
       return React.createElement(
         "div",
         { className: "sc-user-input--button" },
-        React.createElement(SendIcon, { onClick: this._submitText.bind(this) })
+        React.createElement(SendIcon, {
+          colors: this.state.colors,
+          onClick: this._submitText.bind(this)
+        })
       );
     }
 
@@ -149,11 +153,24 @@ var UserInput = function (_Component) {
 
     var _state = this.state,
         emojiPickerIsOpen = _state.emojiPickerIsOpen,
-        inputActive = _state.inputActive;
+        inputActive = _state.inputActive,
+        colors = _state.colors;
+    var inputBg = colors.inputBg,
+        inputText = colors.inputText,
+        inputPlaceholder = colors.inputPlaceholder;
 
+    console.log("User Input : ", colors);
     return React.createElement(
       "form",
-      { className: "sc-user-input " + (inputActive ? "active" : "") },
+      {
+        className: "sc-user-input " + (inputActive ? "active" : ""),
+        style: { backgroundColor: inputBg, color: inputText }
+      },
+      React.createElement(
+        "style",
+        null,
+        ".sc-user-input--text:empty:before { color:" + inputPlaceholder + " }"
+      ),
       React.createElement("div", {
         role: "button",
         tabIndex: "0",
@@ -170,7 +187,8 @@ var UserInput = function (_Component) {
         onKeyUp: this.handleKeyUp.bind(this),
         contentEditable: "true",
         placeholder: "Write a reply...",
-        className: "sc-user-input--text"
+        className: "sc-user-input--text",
+        style: { color: inputText }
       }),
       React.createElement(
         "div",

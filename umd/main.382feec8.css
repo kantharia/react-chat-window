@@ -1,5 +1,5 @@
 /*!
- * react-chat-window v1.2.0 - https://kingofthestack.github.io/react-chat-window/
+ * react-chat-window v1.2.1 - https://kingofthestack.github.io/react-chat-window/
  * MIT Licensed
  */
 .sc-emoji-picker {
@@ -259,6 +259,13 @@
   position: relative;
   top: 18px;
   font-size: 16px;
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .sc-header-close-button {
+    display: block;
+  }
 }
 
 .sc-header {

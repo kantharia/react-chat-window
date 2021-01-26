@@ -4,8 +4,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import React, { Component } from 'react';
-import Message from './Messages';
+import React, { Component } from "react";
+import Message from "./Messages";
 
 var MessageList = function (_Component) {
   _inherits(MessageList, _Component);
@@ -23,13 +23,21 @@ var MessageList = function (_Component) {
   MessageList.prototype.render = function render() {
     var _this2 = this;
 
+    var colors = this.props.colors;
+    var chatListBg = colors.chatListBg;
+
+
     return React.createElement(
-      'div',
-      { className: 'sc-message-list', ref: function ref(el) {
+      "div",
+      {
+        className: "sc-message-list",
+        ref: function ref(el) {
           return _this2.scrollList = el;
-        } },
+        },
+        style: { backgroundColor: chatListBg }
+      },
       this.props.messages.map(function (message, i) {
-        return React.createElement(Message, { message: message, key: i });
+        return React.createElement(Message, { message: message, key: i, colors: colors });
       })
     );
   };

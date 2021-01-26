@@ -17,13 +17,18 @@ var Header = function (_Component) {
   }
 
   Header.prototype.render = function render() {
+    var colors = this.props.colors;
+    var secondary = colors.secondary,
+        headerBg = colors.headerBg,
+        headerText = colors.headerText;
+
     return React.createElement(
       "div",
-      { className: "sc-header" },
+      { className: "sc-header", style: { backgroundColor: headerBg } },
       React.createElement("img", { className: "sc-header--img", src: this.props.imageUrl, alt: "" }),
       React.createElement(
         "div",
-        { className: "sc-header--team-name" },
+        { className: "sc-header--team-name", style: { color: headerText } },
         " ",
         this.props.teamName,
         " "
@@ -31,7 +36,10 @@ var Header = function (_Component) {
       React.createElement(
         "div",
         { className: "", onClick: this.props.onClose },
-        React.createElement("i", { className: "icon-close-button sc-header-close-button" })
+        React.createElement("i", {
+          className: "icon-close-button sc-header-close-button",
+          style: { top: "0px", color: secondary }
+        })
       )
     );
   };

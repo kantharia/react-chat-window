@@ -18,7 +18,9 @@ var ChatWindow = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 
-    _this.state = {};
+    _this.state = {
+      colors: props.colors
+    };
     return _this;
   }
 
@@ -37,15 +39,18 @@ var ChatWindow = function (_Component) {
       "div",
       { className: classList.join(" ") },
       React.createElement(Header, {
+        colors: this.state.colors || {},
         teamName: this.props.agentProfile.teamName,
         imageUrl: this.props.agentProfile.imageUrl,
         onClose: this.props.onClose
       }),
       React.createElement(MessageList, {
+        colors: this.state.colors || {},
         messages: messageList,
         imageUrl: this.props.agentProfile.imageUrl
       }),
       React.createElement(UserInput, {
+        colors: this.state.colors || {},
         onSubmit: this.onUserInputSubmit.bind(this),
         onFilesSelected: this.onFilesSelected.bind(this),
         showEmoji: this.props.showEmoji,
