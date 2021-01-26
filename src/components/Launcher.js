@@ -65,11 +65,11 @@ class Launcher extends Component {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow: isOpen ? "1px 1px 15px #888888" : "none",
+            boxShadow: isOpen ? "1px 1px 15px rgba(136,136,136,0.5)" : "none",
           }}
         >
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
-          <div style={{ marginTop: "10px" }}>
+          <div style={{ marginTop: "5px" }}>
             {isOpen ? (
               <i
                 className="icon-close-button sc-cloud-icon"
