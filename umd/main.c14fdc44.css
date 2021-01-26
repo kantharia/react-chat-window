@@ -443,13 +443,12 @@
   background-color: #f4f7f9;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-transition: background-color .2s ease,-webkit-box-shadow .2s ease;
-  transition: background-color .2s ease,-webkit-box-shadow .2s ease;
-  -o-transition: background-color .2s ease,box-shadow .2s ease;
-  transition: background-color .2s ease,box-shadow .2s ease;
-  transition: background-color .2s ease,box-shadow .2s ease,-webkit-box-shadow .2s ease;
+  -webkit-transition: background-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  -o-transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
-
 
 .sc-user-input--text {
   width: 300px;
@@ -597,7 +596,8 @@
       align-self: center;
 }
 
-.sc-user-input--emoji-icon path, .sc-user-input--emoji-icon circle {
+.sc-user-input--emoji-icon path,
+.sc-user-input--emoji-icon circle {
   fill: rgba(86, 88, 103, 0.3);
 }
 
@@ -608,6 +608,13 @@
 .sc-user-input--emoji-icon:hover path,
 .sc-user-input--emoji-icon:hover circle {
   fill: rgba(86, 88, 103, 1);
+}
+
+@media (max-width: 450px) {
+  .sc-user-input {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
 
 .sc-popup-window {
@@ -795,3 +802,5 @@
   content: "b";
 }
 
+
+/*# sourceMappingURL=main.c14fdc44.css.map*/

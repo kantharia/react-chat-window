@@ -4850,13 +4850,13 @@ var Launcher_Launcher = function (_Component) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow: isOpen ? "1px 1px 15px #888888" : "none"
+            boxShadow: isOpen ? "1px 1px 15px rgba(136,136,136,0.5)" : "none"
           }
         },
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Launcher_MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
           "div",
-          { style: { marginTop: "10px" } },
+          { style: { marginTop: "5px" } },
           isOpen ? external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", {
             className: "icon-close-button sc-cloud-icon",
             style: { fontSize: "24pt", color: secondary }

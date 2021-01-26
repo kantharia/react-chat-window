@@ -82,13 +82,13 @@ var Launcher = function (_Component) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            boxShadow: isOpen ? "1px 1px 15px #888888" : "none"
+            boxShadow: isOpen ? "1px 1px 15px rgba(136,136,136,0.5)" : "none"
           }
         },
         React.createElement(MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
         React.createElement(
           "div",
-          { style: { marginTop: "10px" } },
+          { style: { marginTop: "5px" } },
           isOpen ? React.createElement("i", {
             className: "icon-close-button sc-cloud-icon",
             style: { fontSize: "24pt", color: secondary }
