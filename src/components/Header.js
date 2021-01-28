@@ -15,7 +15,10 @@ class Header extends Component {
         <div className="" onClick={this.props.onClose}>
           <i
             className="icon-close-button sc-header-close-button"
-            style={{ top: "0px", color: secondary }}
+            style={{
+              top: "0px",
+              color: secondary,
+            }}
           ></i>
         </div>
       </div>

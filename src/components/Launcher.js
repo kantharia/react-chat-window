@@ -69,11 +69,14 @@ class Launcher extends Component {
           }}
         >
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
-          <div style={{ marginTop: "5px" }}>
+          <div style={{ paddingTop: "10px" }}>
             {isOpen ? (
               <i
                 className="icon-close-button sc-cloud-icon"
-                style={{ fontSize: "24pt", color: secondary }}
+                style={{
+                  fontSize: "14pt",
+                  color: secondary,
+                }}
               ></i>
             ) : (
               <i

@@ -4668,7 +4668,10 @@ var Header_Header = function (_Component) {
         { className: "", onClick: this.props.onClose },
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", {
           className: "icon-close-button sc-header-close-button",
-          style: { top: "0px", color: secondary }
+          style: {
+            top: "0px",
+            color: secondary
+          }
         })
       )
     );
@@ -4856,10 +4859,13 @@ var Launcher_Launcher = function (_Component) {
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(Launcher_MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
           "div",
-          { style: { marginTop: "5px" } },
+          { style: { paddingTop: "10px" } },
           isOpen ? external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", {
             className: "icon-close-button sc-cloud-icon",
-            style: { fontSize: "24pt", color: secondary }
+            style: {
+              fontSize: "14pt",
+              color: secondary
+            }
           }) : external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement("i", {
             className: "icon-chat-widget-cloud sc-close-icon",
             style: {

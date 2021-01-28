@@ -88,7 +88,7 @@ class Demo extends Component {
           colors={{
             primary: "#2c2c54",
             secondary: "#706fd3",
-            headerBg: "#2c2c54",
+            headerBg: "red",
             headerText: "#ecf0f1",
             headerFontSize: "32px",
             chatListBg: "#474787",

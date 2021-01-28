@@ -88,10 +88,13 @@ var Launcher = function (_Component) {
         React.createElement(MessageCount, { count: this.props.newMessagesCount, isOpen: isOpen }),
         React.createElement(
           "div",
-          { style: { marginTop: "5px" } },
+          { style: { paddingTop: "10px" } },
           isOpen ? React.createElement("i", {
             className: "icon-close-button sc-cloud-icon",
-            style: { fontSize: "24pt", color: secondary }
+            style: {
+              fontSize: "14pt",
+              color: secondary
+            }
           }) : React.createElement("i", {
             className: "icon-chat-widget-cloud sc-close-icon",
             style: {

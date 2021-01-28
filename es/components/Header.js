@@ -38,7 +38,10 @@ var Header = function (_Component) {
         { className: "", onClick: this.props.onClose },
         React.createElement("i", {
           className: "icon-close-button sc-header-close-button",
-          style: { top: "0px", color: secondary }
+          style: {
+            top: "0px",
+            color: secondary
+          }
         })
       )
     );
