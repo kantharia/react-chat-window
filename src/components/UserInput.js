@@ -106,7 +106,7 @@ class UserInput extends Component {
   _renderSendOrFileIcon() {
     if (this.state.inputHasText) {
       return (
-        <div className="sc-user-input--button">
+        <div className="sc-user-input--button" style={{marginRight:"10px"}}>
           <SendIcon
             colors={this.state.colors}
             onClick={this._submitText.bind(this)}

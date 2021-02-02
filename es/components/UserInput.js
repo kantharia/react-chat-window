@@ -122,7 +122,7 @@ var UserInput = function (_Component) {
     if (this.state.inputHasText) {
       return React.createElement(
         "div",
-        { className: "sc-user-input--button" },
+        { className: "sc-user-input--button", style: { marginRight: "10px" } },
         React.createElement(SendIcon, {
           colors: this.state.colors,
           onClick: this._submitText.bind(this)
